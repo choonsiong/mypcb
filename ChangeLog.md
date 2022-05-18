@@ -1,7 +1,10 @@
 # ChangeLog
 
-#### 10-01-2021
+#### 18-05-2022
+- 2.0.6
+  - Update max year
 
+#### 10-01-2021
 - 2.0.5
   - Update FAQ.md
 - 2.0.4
@@ -9,12 +12,10 @@
   - Add FAQ.md
   
 #### 24-10-2020
-
 - 2.0.3
     - Clean up
 
 #### 23-10-2020
-
 - 2.0.2
     - Update `Makefile`
     - Minor bug fix

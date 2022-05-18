@@ -1,5 +1,5 @@
 package = mypcb
-version = 2.0.5
+version = 2.0.6
 tarname = $(package)
 distdir = $(tarname)-$(version)
 
