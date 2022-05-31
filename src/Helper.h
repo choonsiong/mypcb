@@ -21,9 +21,9 @@
 extern int set_homedir(void);
 extern void print_usage_and_exit(void);
 
-extern bool validYear(int);
-extern bool validMonth(int);
-extern bool validPCB(const char *);
+extern bool valid_year(int);
+extern bool valid_month(int);
+extern bool valid_pcb(const char *);
 
 extern char *left_padding(int, const char *, const char *);
 extern char *right_padding(int, const char *, const char *);

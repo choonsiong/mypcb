@@ -21,7 +21,7 @@ void print_usage_and_exit(void) {
     exit(1);
 }
 
-bool validYear(int year) {
+bool valid_year(int year) {
     if (year >= MIN_YEAR_RANGE && year <= MAX_YEAR_RANGE) {
         return true;
     }
@@ -29,7 +29,7 @@ bool validYear(int year) {
     return false;
 }
 
-bool validMonth(int month) {
+bool valid_month(int month) {
     if (month >= 1 && month <= 12) {
         return true;
     }
@@ -37,7 +37,7 @@ bool validMonth(int month) {
     return false;
 }
 
-bool validPCB(const char *value) {
+bool valid_pcb(const char *value) {
     char *temp = (char *)calloc(1, sizeof(strlen(value))+ 1);
     temp = (char *)value;
 

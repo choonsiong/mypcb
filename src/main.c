@@ -53,7 +53,7 @@ int main(int argc, const char * argv[]) {
             case 1:
                 int_number = atoi(argv[i]);
                 
-                if (validYear(int_number)) {
+                if (valid_year(int_number)) {
                     year = argv[i];
                 } else {
                     error = true;
@@ -63,7 +63,7 @@ int main(int argc, const char * argv[]) {
             case 2:
                 int_number = atoi(argv[i]);
                 
-                if (validMonth(int_number)) {
+                if (valid_month(int_number)) {
                     // Only to padding if length is 1
                     if (strlen(argv[i]) == 1) {
                         month = left_padding(1, "0", argv[i]);
@@ -76,7 +76,7 @@ int main(int argc, const char * argv[]) {
                 
                 break;
             case 3:
-                if (validPCB(argv[i])) {
+                if (valid_pcb(argv[i])) {
                     total_mtd_amount = left_padding((int)(10 - strlen(argv[i])), "0", argv[i]);
                     mtd_amount = left_padding((int)(8 - strlen(argv[i])), "0", argv[i]);
                 } else {
