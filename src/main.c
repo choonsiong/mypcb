@@ -1,26 +1,6 @@
-/*
-MIT License
-
-Copyright (c) 2020 Lee Choon Siong
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-*/
+// Copyright 2020 Lee Choon Siong. All rights reserved.
+// Use of this source code is governed by a MIT-style
+// license that can be found in the LICENSE file.
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -73,7 +53,7 @@ int main(int argc, const char * argv[]) {
             case 1:
                 int_number = atoi(argv[i]);
                 
-                if (validYear(int_number)) {
+                if (valid_year(int_number)) {
                     year = argv[i];
                 } else {
                     error = true;
@@ -83,7 +63,7 @@ int main(int argc, const char * argv[]) {
             case 2:
                 int_number = atoi(argv[i]);
                 
-                if (validMonth(int_number)) {
+                if (valid_month(int_number)) {
                     // Only to padding if length is 1
                     if (strlen(argv[i]) == 1) {
                         month = left_padding(1, "0", argv[i]);
@@ -96,7 +76,7 @@ int main(int argc, const char * argv[]) {
                 
                 break;
             case 3:
-                if (validPCB(argv[i])) {
+                if (valid_pcb(argv[i])) {
                     total_mtd_amount = left_padding((int)(10 - strlen(argv[i])), "0", argv[i]);
                     mtd_amount = left_padding((int)(8 - strlen(argv[i])), "0", argv[i]);
                 } else {
