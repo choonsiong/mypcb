@@ -40,7 +40,7 @@ $ ls -l ~/bin/mypcb
 ### Usage
 
 ```
-./mypcb --help
+$ ./mypcb --help
 Usage: my_pcb YEAR MONTH PCB_AMOUNT
 
 	YEAR         from 1970 to 2020
@@ -55,6 +55,6 @@ Usage: my_pcb YEAR MONTH PCB_AMOUNT
 For example, below generate the data file for November 2020 with monthly PCB contribution 1234.56.
 
 ```
-19:55:23 69  ./mypcb 2020 11 123456
+$ ./mypcb 2020 11 123456
 Data file written to /Users/lcs/Desktop/PCB_202011.txt
 ```
