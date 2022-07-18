@@ -1,8 +1,8 @@
-# ChangeLog
+# Changelog
 
 #### 26-05-2022
 - 3.0.0
-  - Initialize new branch for new feature development (maybe)
+  - Pump up vesion to 3.0.0
 
 #### 18-05-2022
 - 2.0.6
