@@ -1,5 +1,8 @@
 # Changelog
 
+#### 23-04-2023
+- 3.2.0
+
 #### 07-10-2022
 - 3.1.0
   - Pump up version to 3.1.0 (after tested on Apple Silicon)
