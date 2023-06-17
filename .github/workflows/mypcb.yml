@@ -2,7 +2,7 @@ name: Distribution Test
 on: push
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: Get code
         uses: actions/checkout@v3
@@ -10,7 +10,7 @@ jobs:
         run: make check; make clean
   test-distrib:
     needs: test
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     steps:
       - name: Get code
         uses: actions/checkout@v3
