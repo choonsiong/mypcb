@@ -1,17 +1,19 @@
 BINARY_NAME = mypcb
 
 SOURCES = $(wildcard *.c)
+INCLUDES = ../include
 
 CFLAGS = -g -O0
+CPPFLAGS = -I $(INCLUDES)
 
 all: $(BINARY_NAME)
 
 install: all
-	install -d $(DESTDIR)$(bindir)
-	install -m 0755 $(BINARY_NAME) $(DESTDIR)$(bindir)
+	install -d $(DESTDIR)$(BINDIR)
+	install -m 0755 $(BINARY_NAME) $(DESTDIR)$(BINDIR)
 
 uninstall:
-	rm -f $(DESTDIR)$(bindir)/$(BINARY_NAME)
+	rm -f $(DESTDIR)$(BINDIR)/$(BINARY_NAME)
 #	-rmdir $(DESTDIR)$(bindir) > /dev/null 2>&1
 
 check: all
@@ -28,6 +30,6 @@ clean:
 	-rm $(BINARY_NAME)
 
 $(BINARY_NAME): $(SOURCES)
-	gcc -DCFGDIR="\"$(sysconfdir)\"" -DOUTPUTDIR="\"$(outputdir)\"" $(CFLAGS) -o $@ $(SOURCES)
+	gcc -DCFGDIR="\"$(sysconfdir)\"" -DOUTPUTDIR="\"$(outputdir)\"" $(CFLAGS) $(CPPFLAGS) $(SOURCES) -o $@
 
 .PHONY: all clean check checkclean install uninstall
