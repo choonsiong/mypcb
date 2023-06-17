@@ -1,3 +1,8 @@
+#### 17-06-2023
+- 3.3.2
+  - Add GitHub workflow
+  - Refactor Makefile and clean up
+  
 #### 23-04-2023
 - 3.2.0
 
