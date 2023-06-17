@@ -1,0 +1,18 @@
+name: Distribution Test
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Test mypcb
+        run: make check; make clean
+  test-distrib:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get code
+        uses: actions/checkout@v3
+      - name: Test mypcb distrib
+        run: make dist; make distclean

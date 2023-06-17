@@ -6,6 +6,14 @@ INCLUDES = ../include
 CFLAGS = -g -O0
 CPPFLAGS = -I $(INCLUDES)
 
+ifndef sysconfdir
+sysconfdir=/tmp/etc
+endif
+
+ifndef outputdir
+outputdir=/tmp
+endif
+
 all: $(BINARY_NAME)
 
 install: all
@@ -17,8 +25,8 @@ uninstall:
 #	-rmdir $(DESTDIR)$(bindir) > /dev/null 2>&1
 
 check: all
-	mkdir /tmp/etc
-	cp ../etc/mypcb.conf /tmp/etc/
+	mkdir -p /tmp/etc
+	cp ../etc/example.conf /tmp/etc/mypcb.conf
 	./mypcb 2020 12 999988; ls -l /tmp/PCB_202012.txt
 	@echo "*** ALL TEST PASSED ***"
 
