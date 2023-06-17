@@ -2,7 +2,7 @@
 // Use of this source code is governed by a MIT-style
 // license that can be found in the LICENSE file.
 
-#include "PCBData.h"
+#include "../include/PCBData.h"
 
 struct PCBData *new_pcbdata(void) {
     struct PCBData *ptr_pcbdata;

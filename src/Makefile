@@ -1,4 +1,6 @@
-all: mypcb
+BINARY_NAME = mypcb
+
+all: $(BINARY_NAME)
 
 sources = main.c Helper.c PCBData.c PCBFile.c
 
@@ -13,10 +15,10 @@ check: all
 
 install: all
 	install -d $(DESTDIR)$(bindir)
-	install -m 0755 mypcb $(DESTDIR)$(bindir)
+	install -m 0755 $(BINARY_NAME) $(DESTDIR)$(bindir)
 
 uninstall:
-	rm -f $(DESTDIR)$(bindir)/mypcb
+	rm -f $(DESTDIR)$(bindir)/$(BINARY_NAME)
 #	-rmdir $(DESTDIR)$(bindir) > /dev/null 2>&1
 
 checkclean: clean
@@ -24,6 +26,6 @@ checkclean: clean
 	rm -rf /tmp/etc
 
 clean:
-	-rm mypcb
+	-rm $(BINARY_NAME)
 
 .PHONY: all clean check checkclean install uninstall

@@ -6,9 +6,9 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-#include "Helper.h"
-#include "PCBData.h"
-#include "PCBFile.h"
+#include "../include/Helper.h"
+#include "../include/PCBData.h"
+#include "../include/PCBFile.h"
 
 #ifndef CFGDIR
 #define CFGDIR "/etc"
