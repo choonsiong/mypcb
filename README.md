@@ -7,6 +7,8 @@ This program generates the __MTD data text file__ required for LHDN PCB submissi
 - Supports only one employer number
 - Supports only one employee entry
 
+> Checkout the [Go version](https://github.com/choonsiong/gopcb) that supports multiple employers and employees.
+
 ### Reference
 
 - [MTD Data specification](http://lampiran1.hasil.gov.my/pdf/pdfam/FormatDataCP39BI.pdf)
