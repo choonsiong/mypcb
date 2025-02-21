@@ -1,0 +1,9 @@
+*.dSYM/
+
+*.o
+*.tar.gz
+
+mypcb
+mypcb.conf
+
+archive
