@@ -1,4 +1,4 @@
-name: push
+name: ubuntu-release
 on: push
 env:
   version: 3.3.3
@@ -28,11 +28,11 @@ jobs:
         run: |
           make prefix=/opt/mypcb sysconfdir=/opt/mypcb/etc outputdir=/opt/mypcb/out all
           cd src
-          tar -czf mypcb-${{ env.version }}.tar.gz mypcb
+          tar -czf mypcb-linux-x64-${{ env.version }}.tar.gz mypcb
       - name: release
         uses: softprops/action-gh-release@v2
         with:
           token: ${{ secrets.DEVOPS_TOKEN }}
           tag_name: ${{ env.version }}
           name: release ${{ env.version }}
-          files: src/mypcb-${{ env.version }}.tar.gz
+          files: src/mypcb-linux-x64-${{ env.version }}.tar.gz
