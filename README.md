@@ -38,6 +38,24 @@ total 112
 -rwxr-xr-x  1 choonsiong  staff  54312 Feb 22 03:58 mypcb* 
 ```
 
+To build the binary and install at the same time.
+
+```
+$ make prefix=$HOME sysconfdir=$HOME/etc outputdir=$HOME/Desktop install
+cd src && /Applications/Xcode.app/Contents/Developer/usr/bin/make install
+gcc -DCFGDIR="\"/Users/choonsiong/etc\"" -DOUTPUTDIR="\"/Users/choonsiong/Desktop\"" -g -O0 -I ../include Helper.c PCBData.c PCBFile.c main.c -o mypcb
+install -d /Users/choonsiong/bin
+install -m 0755 mypcb /Users/choonsiong/bin
+```
+
+To clean the binary. 
+
+```
+$ make clean
+cd src && /Applications/Xcode.app/Contents/Developer/usr/bin/make clean
+rm mypcb
+```
+
 ### Usage
 
 ```
