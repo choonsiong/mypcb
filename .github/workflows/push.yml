@@ -1,4 +1,4 @@
-name: Distribution Test
+name: push
 on: push
 jobs:
   test:
