@@ -25,3 +25,4 @@ jobs:
       - name: build
         run: |
           gcc --version
+          make --version
