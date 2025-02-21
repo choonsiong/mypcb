@@ -1,3 +1,7 @@
+#### 22-02-2025
+- 3.3.4
+  - Update Makefile and workflow
+
 #### 17-06-2023
 - 3.3.2
   - Add GitHub workflow
@@ -5,6 +9,7 @@
   
 #### 23-04-2023
 - 3.2.0
+  - Pump up version to 3.2.0
 
 #### 07-10-2022
 - 3.1.0
