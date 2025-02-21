@@ -27,7 +27,9 @@ jobs:
       - name: build
         run: |
           make prefix=/opt/mypcb sysconfdir=/opt/mypcb/etc outputdir=/opt/mypcb/out all
-          cd src
+          mkdir -p mypcb/etc mypcb/out
+          cp src/mypcb mypcb/
+          cp etc/example.conf mypcb/etc/
           tar -czf mypcb-linux-x64-${{ env.version }}.tar.gz mypcb
       - name: release
         uses: softprops/action-gh-release@v2
