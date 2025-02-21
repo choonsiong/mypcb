@@ -31,10 +31,11 @@ jobs:
           cp src/mypcb mypcb/
           cp etc/example.conf mypcb/etc/
           tar -czf mypcb-linux-x64-${{ env.version }}.tar.gz mypcb
+          ls -l
       - name: release
         uses: softprops/action-gh-release@v2
         with:
           token: ${{ secrets.DEVOPS_TOKEN }}
           tag_name: ${{ env.version }}
           name: release ${{ env.version }}
-          files: src/mypcb-linux-x64-${{ env.version }}.tar.gz
+          files: mypcb-linux-x64-${{ env.version }}.tar.gz
