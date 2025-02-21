@@ -27,11 +27,12 @@ jobs:
       - name: build
         run: |
           make prefix=/opt/mypcb sysconfdir=/opt/mypcb/etc outputdir=/opt/mypcb/out all
-          ls -l src
-#      - name: release
-#        uses: softprops/action-gh-release@v2
-#          with:
-#            token: ${{ secrets.DEVOPS_TOKEN }}
-#            tag_name: ${{ env.version }}
-#            name: release ${{ env.version }}
-#            files: code-${{ env.version }}.tar.gz
+          cd src
+          tar -czf mypcb-${{ env.version }}.tar.gz mypcb
+      - name: release
+        uses: softprops/action-gh-release@v2
+        with:
+          token: ${{ secrets.DEVOPS_TOKEN }}
+          tag_name: ${{ env.version }}
+          name: release ${{ env.version }}
+          files: mypcb-${{ env.version }}.tar.gz
