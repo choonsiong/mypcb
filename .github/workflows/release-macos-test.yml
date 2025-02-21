@@ -1,3 +1,4 @@
+# This is for testing only, the binary won't run on macOS as it is not signed.
 name: push
 on: push
 env:
@@ -29,7 +30,6 @@ jobs:
           make prefix=/opt/mypcb sysconfdir=/opt/mypcb/etc outputdir=/opt/mypcb/out all
           cd src
           tar -czf mypcb-${{ env.version }}.tar.gz mypcb
-          ls -l
       - name: release
         uses: softprops/action-gh-release@v2
         with:
