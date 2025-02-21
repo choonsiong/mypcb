@@ -30,8 +30,8 @@ jobs:
           mkdir -p mypcb/etc mypcb/out
           cp src/mypcb mypcb/
           cp etc/example.conf mypcb/etc/
+          cp LINUX_RELEASE.md mypcb/
           tar -czf mypcb-linux-x64-${{ env.version }}.tar.gz mypcb
-          ls -l
       - name: release
         uses: softprops/action-gh-release@v2
         with:
