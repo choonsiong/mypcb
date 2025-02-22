@@ -19,21 +19,21 @@ jobs:
         uses: actions/checkout@v3
       - name: Test mypcb distrib
         run: make dist; make distclean
-  build:
-    needs: test-distrib
-    runs-on: macos-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@v4
-      - name: build
-        run: |
-          make prefix=/opt/mypcb sysconfdir=/opt/mypcb/etc outputdir=/opt/mypcb/out all
-          cd src
-          tar -czf mypcb-macos-arm-${{ env.version }}.tar.gz mypcb
-      - name: release
-        uses: softprops/action-gh-release@v2
-        with:
-          token: ${{ secrets.DEVOPS_TOKEN }}
-          tag_name: ${{ env.version }}
-          name: release ${{ env.version }}
-          files: src/mypcb-macos-arm-${{ env.version }}.tar.gz
+#  build:
+#    needs: test-distrib
+#    runs-on: macos-latest
+#    steps:
+#      - name: checkout
+#        uses: actions/checkout@v4
+#      - name: build
+#        run: |
+#          make prefix=/opt/mypcb sysconfdir=/opt/mypcb/etc outputdir=/opt/mypcb/out all
+#          cd src
+#          tar -czf mypcb-macos-arm-${{ env.version }}.tar.gz mypcb
+#      - name: release
+#        uses: softprops/action-gh-release@v2
+#        with:
+#          token: ${{ secrets.DEVOPS_TOKEN }}
+#          tag_name: ${{ env.version }}
+#          name: release ${{ env.version }}
+#          files: src/mypcb-macos-arm-${{ env.version }}.tar.gz
