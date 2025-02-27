@@ -1,3 +1,7 @@
+#### 27-02-2025
+- 3.3.5
+  - Update LICENSE
+
 #### 22-02-2025
 - 3.3.4
   - Update Makefile and workflow
